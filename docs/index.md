@@ -96,7 +96,7 @@ Precision@k for k = 20, 50, 100, 200, 500, 1000, comparing:
 
 The chart compares random selection, the oracle baseline, and the final logistic-regression ranking across review-queue sizes.
 
-![Precision@k comparison](precision@k_table.png)
+![Precision@k comparison](precision@k_chart.png)
 
 **Interpretation:**  
 - At the top of the queue (k=20), 95% of pages flagged by the model are truly high-gap, versus about 31% if pages were selected at random.  
