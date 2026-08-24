@@ -83,20 +83,24 @@ Precision@k for k = 20, 50, 100, 200, 500, 1000, comparing:
 
 **Precision@k table:**
 
-| k    | Baseline precision@k | Final Model precision@k |
-|------|----------------------|-------------------------|
-| 20   | 100.0%               | 95.0%                   |
-| 50   | 100.0%               | 82.0%                   |
-| 100  | 100.0%               | 72.0%                   |
-| 200  | 100.0%               | 65.5%                   |
-| 500  | 100.0%               | 54.0%                   |
-| 1000 | 100.0%               | 50.1%                   |
+| k    | Random precision@k | Baseline precision@k | Final Model precision@k |
+|------|--------------------|----------------------|-------------------------|
+| 20   | 31.1%              | 100.0%               | 95.0%                   |
+| 50   | 31.1%              | 100.0%               | 82.0%                   |
+| 100  | 31.1%              | 100.0%               | 72.0%                   |
+| 200  | 31.1%              | 100.0%               | 65.5%                   |
+| 500  | 31.1%              | 100.0%               | 54.0%                   |
+| 1000 | 31.1%              | 100.0%               | 50.1%                   |
+
+**Precision@k chart:**
+
+The chart compares random selection, the oracle baseline, and the final logistic-regression ranking across review-queue sizes.
+
+![Precision@k comparison](precision@k_table.png)
 
 **Interpretation:**  
-- At the top of the queue (k=20), 95% of pages flagged by the model are truly high-gap, versus 31% if pages were selected at random.  
+- At the top of the queue (k=20), 95% of pages flagged by the model are truly high-gap, versus about 31% if pages were selected at random.  
 - Precision declines at larger k, which is expected and acceptable: the SEO team primarily uses the top of the queue, where the model is most accurate.
-
-*(If you want, you can later add a simple chart image here, e.g., a line plot of precision@k for baseline vs model.)*
 
 ---
 
@@ -130,7 +134,7 @@ The model is most useful at the top of the queue: on the test split, 95% of the 
 All analysis and modeling are implemented in a public Jupyter notebook:
 
 - **Capstone notebook:** `work/notebooks/capstone.ipynb` in this repository.  
-- **Repository:** [[https://github.com/T0othIess/FlyRank-AI-ML-internship](https://github.com/T0othIess/FlyRank-AI-ML-internship)]
+- **Repository:** [https://github.com/T0othIess/FlyRank-AI-ML-internship](https://github.com/T0othIess/FlyRank-AI-ML-internship)
 
 The notebook loads data from the FlyRank ML Internship warehouse on Hugging Face, constructs a page-level dataset for March 2026, defines the `is_high_gap` label, trains a logistic regression model, and evaluates it against an oracle baseline using precision@k. Running the notebook end-to-end reproduces the tables and results reported in this paper.
 
