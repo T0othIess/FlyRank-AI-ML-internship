@@ -1,0 +1,21 @@
+{
+  "expected_ctr_per_tier": {
+    "page_1": 0.0037109230117956292,
+    "striking": 0.003289557533093802,
+    "page_3_5": 0.001369257363851267
+  },
+  "reason_code_counts": {
+    "NO_ACTION_NEEDED": 7085,
+    "HIGH_PRIORITY_CTR_GAP": 2851,
+    "HIGH_VOLUME_LOW_CTR_GAP": 2395,
+    "NOT_EVALUABLE_LABEL_LIMITATION": 1454,
+    "SEVERE_CTR_GAP_LOW_VOLUME": 1422,
+    "LOW_PRIORITY_CTR_GAP": 1255
+  },
+  "w06_precision_at_20_range": {
+    "min": 0.4,
+    "max": 0.95,
+    "mean": 0.5800000000000001
+  },
+  "data_month": "2026-03"
+}
