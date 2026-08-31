@@ -216,7 +216,7 @@ The CTR-gap baseline stays much stronger because it directly uses an outcome-der
 
 ### Precision@k chart
 
-![Precision@k across the review queue](../work/figures/capstone_precision_at_k.png)
+![Precision@k across the review queue](figures/capstone_precision_at_k.png)
 
 *Figure 1. Mean Precision@k across the 50 grouped holdouts. Random selection is the split base rate, the CTR-gap baseline is label-informed, and the logistic regression ranks pages without receiving clicks, CTR, expected CTR, or CTR gap as features.*
 
